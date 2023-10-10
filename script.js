@@ -7,6 +7,7 @@ import {
   spinner,
   seedSlider,
   seedEl,
+  imgState,
   input,
   modelSelect,
   modelOption,
@@ -18,8 +19,10 @@ import {
   guidance,
   guidanceSlider,
   schedulerSelect,
+  editBtn,
 } from "./js/variabel.js";
-import { images } from "./fetch.js";
+import { process } from "./fetch.js";
+
 
 function hitung() {
   spinner.style.display = "inline-block";
@@ -38,7 +41,7 @@ function generate() {
     errorMsg.innerHTML = "Masukan Prompt";
   } else {
     hitung();
-    images();
+    process();
   }
 }
 Xdel.addEventListener("click", () => deletePrompt());
@@ -72,5 +75,5 @@ function negative() {
 
 schedulerSelect.addEventListener("change", () => scheduler());
 function scheduler() {
-//  console.log(schedulerSelect.value);
+  //  console.log(schedulerSelect.value);
 }

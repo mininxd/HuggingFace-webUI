@@ -16,7 +16,7 @@ import {
   schedulerSelect,
 } from "./js/variabel.js";
 
-export function images() {
+export function process() {
   btnGen.disabled = true;
   btnGen.classList.add("btn-secondary");
   var input = document.getElementById("input");
