@@ -1,4 +1,6 @@
 export const btnGen = document.getElementById("btn-generate");
+export const loginEl = document.getElementById("login");
+export const inputApi = document.getElementById("inputApi");
 export const errorMsg = document.getElementById("errorMsg");
 export const image = document.getElementById("image");
 export const imgState = document.getElementById("imgState");

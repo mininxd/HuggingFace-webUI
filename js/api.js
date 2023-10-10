@@ -1,1 +1,38 @@
-function _0x402d(){const _0x4063b0=['279004OfSItX','3158jdsaRy','1480419ZTbIsh','547708MVtIOd','191NoCeKp','9657KOvpzR','1632lzftVj','2310890iBGdBF','2137056hBqtTJ'];_0x402d=function(){return _0x4063b0;};return _0x402d();}function _0x4451(_0x24f4fc,_0x2c5475){const _0x402d32=_0x402d();return _0x4451=function(_0x445107,_0x3734b0){_0x445107=_0x445107-0x132;let _0x4c2772=_0x402d32[_0x445107];return _0x4c2772;},_0x4451(_0x24f4fc,_0x2c5475);}(function(_0x22d45,_0xf80700){const _0x52a686=_0x4451,_0x33eb76=_0x22d45();while(!![]){try{const _0x186f6f=-parseInt(_0x52a686(0x136))/0x1*(-parseInt(_0x52a686(0x133))/0x2)+parseInt(_0x52a686(0x134))/0x3+-parseInt(_0x52a686(0x132))/0x4+-parseInt(_0x52a686(0x139))/0x5+parseInt(_0x52a686(0x13a))/0x6+-parseInt(_0x52a686(0x135))/0x7+-parseInt(_0x52a686(0x138))/0x8*(parseInt(_0x52a686(0x137))/0x9);if(_0x186f6f===_0xf80700)break;else _0x33eb76['push'](_0x33eb76['shift']());}catch(_0x16f968){_0x33eb76['push'](_0x33eb76['shift']());}}}(_0x402d,0x4ea7d));export const auth='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';
+import { btnGen, inputApi, loginEl } from "./variabel.js";
+var getAPI = localStorage.getItem("hugface");
+export const api = getAPI;
+var apikey = document.getElementById("apikey");
+var showApi = document.getElementById("showApi");
+
+apikey.innerHTML = "Your API : ******************";
+
+showApi.addEventListener("click", () => show());
+function show() {
+  apikey.innerHTML = "Your API : " + getAPI;
+  showApi.style.display = "none";
+}
+
+if (getAPI == null) {
+  inputApi.style.display = "block";
+  loginEl.style.display = "block";
+  loginEl.addEventListener("click", () => login());
+  function login() {
+    if (inputApi.value.length < 5) {
+      inputApi.focus();
+    } else {
+      localStorage.setItem("hugface", inputApi.value);
+      location.reload();
+    }
+  }
+  btnGen.disabled = true;
+  showApi.style.display = "none";
+  apikey.innerHTML =
+    "<a href='https://huggingface.co/settings/tokens'> Get huggingface Access Token </a>";
+  apikey.style.fontSize = "16px";
+}
+
+document.getElementById("deleteApi").addEventListener("click", () => del());
+function del() {
+  localStorage.removeItem("hugface");
+  location.reload();
+}
