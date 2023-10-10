@@ -1,1 +1,19 @@
-
+export const btnGen = document.getElementById("btn-generate");
+export const errorMsg = document.getElementById("errorMsg");
+export const image = document.getElementById("image");
+export const running = document.getElementById("running");
+export const input = document.getElementById("input");
+export const seedEl = document.getElementById("seed");
+export const spinner = document.getElementById("spinner");
+export const Xdel = document.getElementById("deleteAll");
+export const modelSelect = document.getElementById("modelSelect");
+export const schedulerSelect = document.getElementById("schedulerSelect");
+export const modelInput = document.getElementById("modelInput");
+export const modelOption = document.getElementById("modelOption");
+export const seedSlider = document.getElementById("seedSlider");
+export const negativePrompt = document.getElementById("negativePrompt");
+export const negativeSelect = document.getElementById("negativeSelect");
+export const inference = document.getElementById("inference");
+export const inferenceSlider = document.getElementById("inferenceSlider");
+export const guidance = document.getElementById("guidance");
+export const guidanceSlider = document.getElementById("guidanceSlider");
