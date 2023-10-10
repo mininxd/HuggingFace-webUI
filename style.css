@@ -1,0 +1,104 @@
+html {
+  position: relative;
+}
+body,
+.body {
+  background: #2d2d2d;
+  white-space: nowrap;
+  margin-top: 10px;
+  padding: 1em;
+  color: #fff;
+}
+hr {
+  height: 2px;
+  background-color: #555;
+  border: none;
+}
+#seed {
+  width: 98%;
+  color: #fff;
+  border: 1px solid #555;
+  margin-top: 10px;
+  background: #2d2d2d;
+}
+#seed::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+#input {
+  color: #fff;
+  background: #2d2d2d;
+  z-index: 1;
+  text-align: left;
+  width: 98%;
+  height: 200px;
+  border: 1px solid #555;
+}
+#input::placeholder,
+#negativePrompt::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+#btn-generate {
+  width: 100%;
+}
+#deleteAll {
+  opacity: 0.5;
+  position: absolute;
+  z-index: 100;
+  margin-top: 8px;
+  right: 2em;
+  padding: 4px;
+}
+#deleteAll:hover {
+  opacity: 1;
+}
+.resultImg {
+  padding: 10px;
+  border: 1px #555 solid;
+}
+#errorMsg {
+  color: #f63d3d;
+  font-style: oblique;
+  font-size: 14px;
+}
+.seedSlider,
+.inferenceSlider, .guidanceSlider{
+  width: 80%;
+  --webkit-appearance: none;
+  accent-color: #eee;
+}
+.resultText {
+  position: absolute;
+
+  z-index: 100;
+}
+.form-adv {
+  background: #2d2d2d;
+  color: #fff;
+
+  width: 95%;
+  height: 2em;
+  padding: 5px;
+}
+.label-adv {
+  opacity: 0.7;
+}
+a,
+a:visited {
+  font-style: oblique;
+  color: #999;
+}
+.helper {
+  display: inline;
+}
+.slogan {
+  color: #999;
+  font-size: 15px;
+  font-style: oblique;
+}
+.status {
+  margin-left: 1em;
+  font-weight: 600;
+  font-size: 25px;
+}
