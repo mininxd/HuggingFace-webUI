@@ -1,7 +1,9 @@
 export const btnGen = document.getElementById("btn-generate");
 export const errorMsg = document.getElementById("errorMsg");
 export const image = document.getElementById("image");
+export const imgState = document.getElementById("imgState");
 export const running = document.getElementById("running");
+export const editBtn = document.getElementById("editBtn");
 export const input = document.getElementById("input");
 export const seedEl = document.getElementById("seed");
 export const spinner = document.getElementById("spinner");
