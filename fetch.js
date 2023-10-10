@@ -66,7 +66,7 @@ export function run() {
           <li>Ada typo saat penulisan model</li>
           <li>Model tersebut tidak bisa di deploy</li>
           <li>Coba untuk mengubah seed</li>
-          <li>Pastikan kamu sudah login</li>
+          <li>Pastikan access token tidak salah</li>
           </ul>
           `;
       }
