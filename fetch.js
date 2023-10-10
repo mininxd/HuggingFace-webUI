@@ -16,8 +16,9 @@ import {
   schedulerSelect,
 } from "./js/variabel.js";
 
-export function process() {
+export function run() {
   btnGen.disabled = true;
+  spinner.style.display = "inline-block";
   btnGen.classList.add("btn-secondary");
   var input = document.getElementById("input");
 
@@ -61,6 +62,7 @@ export function process() {
       if (response.size < 500) {
         errorMsg.innerHTML = `Error : <br><ul>
           <li>Cek kembali prompt kamu</li>
+          <li>Refresh halaman</li>
           <li>Ada typo saat penulisan model</li>
           <li>Model tersebut tidak bisa di deploy</li>
           <li>Coba untuk mengubah seed</li>

@@ -21,11 +21,9 @@ import {
   schedulerSelect,
   editBtn,
 } from "./js/variabel.js";
-import { process } from "./fetch.js";
+import { run } from "./fetch.js";
 
-
-function hitung() {
-  spinner.style.display = "inline-block";
+/*function hitung() {
   var i = 0;
   i = 0;
   setInterval(function () {
@@ -33,6 +31,7 @@ function hitung() {
     running.innerHTML = "Running..." + parseFloat(i).toFixed(2);
   }, 10);
 }
+*/
 btnGen.addEventListener("click", () => generate());
 function generate() {
   running.style.display = "block";
@@ -40,8 +39,8 @@ function generate() {
   if (input.value.length < 1) {
     errorMsg.innerHTML = "Masukan Prompt";
   } else {
-    hitung();
-    process();
+    // hitung();
+    run();
   }
 }
 Xdel.addEventListener("click", () => deletePrompt());
