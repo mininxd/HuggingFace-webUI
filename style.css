@@ -63,7 +63,8 @@ hr {
   font-size: 14px;
 }
 .seedSlider,
-.inferenceSlider, .guidanceSlider{
+.inferenceSlider,
+.guidanceSlider {
   width: 80%;
   --webkit-appearance: none;
   accent-color: #eee;
@@ -101,4 +102,14 @@ a:visited {
   margin-left: 1em;
   font-weight: 600;
   font-size: 25px;
+}
+
+@media (orientation: landscape) {
+  body {
+    padding: 0 5em 0 5em;
+  }
+
+  #deleteAll {
+    right: 7em;
+  }
 }
