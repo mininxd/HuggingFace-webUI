@@ -21,10 +21,6 @@ hr {
   margin-top: 10px;
   background: #2d2d2d;
 }
-#seed::placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
 #input {
   color: #fff;
   background: #2d2d2d;
@@ -35,7 +31,9 @@ hr {
   border: 1px solid #555;
 }
 #input::placeholder,
-#negativePrompt::placeholder {
+#negativePrompt::placeholder,
+#seed::placeholder,
+#inputApi::placeholder {
   color: #fff;
   opacity: 0.5;
 }
@@ -112,4 +110,26 @@ a:visited {
   #deleteAll {
     right: 7em;
   }
+}
+
+#apikey {
+  font-size: 10px;
+  opacity: 0.5;
+}
+#showApi {
+  font-size: 12px;
+  opacity: 0.5;
+  color: #fff;
+  transform: translatey(-5px);
+}
+.login {
+  margin: 5px;
+}
+
+#modelInput,
+#modelSelect,
+#negativePrompt,
+#negativeSelect,
+#schedulerSelect {
+  border: 1px solid #555;
 }

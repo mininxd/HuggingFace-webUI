@@ -22,6 +22,7 @@ import {
   editBtn,
 } from "./js/variabel.js";
 import { run } from "./fetch.js";
+import { api } from "./js/api.js";
 
 /*function hitung() {
   var i = 0;
@@ -38,6 +39,7 @@ function generate() {
   errorMsg.innerHTML = "";
   if (input.value.length < 1) {
     errorMsg.innerHTML = "Masukan Prompt";
+    input.focus()
   } else {
     // hitung();
     run();

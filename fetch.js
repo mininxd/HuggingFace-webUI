@@ -1,4 +1,4 @@
-import { auth } from "./js/api.js";
+import { api } from "./js/api.js";
 import {
   image,
   btnGen,
@@ -28,7 +28,7 @@ export function run() {
       "https://api-inference.huggingface.co/models/" + modelInput.value,
       {
         headers: {
-          Authorization: "Bearer " + auth,
+          Authorization: "Bearer " + api,
         },
         method: "POST",
         body: JSON.stringify(data),
@@ -66,6 +66,7 @@ export function run() {
           <li>Ada typo saat penulisan model</li>
           <li>Model tersebut tidak bisa di deploy</li>
           <li>Coba untuk mengubah seed</li>
+          <li>Pastikan kamu sudah login</li>
           </ul>
           `;
       }
