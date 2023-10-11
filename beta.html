@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
@@ -242,14 +243,23 @@
     <!-- -->
     <br /><br />
 
-    <div class="d-flex justify-content-end">
-      <button
-        style="font-size: 10px"
-        id="deleteApi"
-        class="btn btn-sm btn-danger"
-      >
-        Reset Access Token
-      </button>
+    <div class="row">
+      <div class="col-8">
+        <md-block>
+          [![Donate -
+          Saweria](https://img.shields.io/badge/Donate-Saweria-2ea44f?style=for-the-badge)](https://saweria.co/mininxd)
+        </md-block>
+      </div>
+      <div class="col-4">
+        <button
+          style="font-size: 10px"
+          id="deleteApi"
+          class="btn btn-sm btn-danger"
+        >
+          Reset Access Token
+        </button>
+        <br />
+      </div>
     </div>
   </body>
 </html>
