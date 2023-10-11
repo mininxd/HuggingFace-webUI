@@ -3,7 +3,6 @@ import { openDefaultEditor } from "./pintura.js";
 
 image.addEventListener("click", () => editorScreen());
 function editorScreen() {
-  alert();
   const editor = openDefaultEditor({
     src: image,
   });
