@@ -33,9 +33,13 @@ hr {
 #input::placeholder,
 #negativePrompt::placeholder,
 #seed::placeholder,
-#inputApi::placeholder {
+#inputApi::placeholder,
+#inputSearch::placeholder {
   color: #fff;
   opacity: 0.5;
+}
+#inputSearch {
+  border: 1px #555 solid;
 }
 #btn-generate {
   width: 100%;
@@ -59,13 +63,16 @@ hr {
   color: #fbac0b;
   font-style: oblique;
   font-size: 14px;
+  word-break: break-all;
+  word-break: normal;
+  white-space: normal;
 }
 .seedSlider,
 .inferenceSlider,
 .guidanceSlider {
   width: 80%;
   --webkit-appearance: none;
-  accent-color: #eee;
+  accent-color: #519bdb;
 }
 .resultText {
   position: absolute;
@@ -132,4 +139,8 @@ a:visited {
 #negativeSelect,
 #schedulerSelect {
   border: 1px solid #555;
+}
+.list-group-item {
+  border: solid 1px #555;
+  overflow-x: scroll;
 }

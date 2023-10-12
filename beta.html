@@ -23,6 +23,7 @@
     <script type="module" src="./script.js"></script>
     <script type="module" src="./module/pintura.js"></script>
     <script type="module" src="./module/pinturaScript.js"></script>
+    <script type="module" src="./module/search.js"></script>
   </head>
   <body>
     <center>
@@ -81,13 +82,14 @@
         class="spinner-border spinner-border-sm text-dark"
       ></span></button
     ><br />
-    <span id="errorMsg"></span>
 
+    <span id="errorMsg"
+      ></span>
     <br />
     <div class="resultImg">
       <span clsss="resultText" style="opacity: 0.5">Result: </span><br />
       <div class="d-flex justify-content-center">
-        <img width="256px" height="auto" id="image"/>
+        <img width="256px" height="auto" id="image" />
       </div>
       <span
         class="opacity-50 d-flex justify-content-end"
@@ -124,54 +126,55 @@
       <label class="label-adv">Model :</label>
       <br />
       <input
-        value="stabilityai/stable-diffusion-xl-base-1.0"
+        value="emilianJR/epiCRealism"
         class="text-light form-control bg-transparent"
         id="modelInput"
       />
       <br />
-      <label class="label-adv">Model Template :</label><br />
-      <select id="modelSelect" class="form-select bg-transparent text-light">
-        <option
-          id="modelOption"
-          selected
-          value="stabilityai/stable-diffusion-xl-base-1.0"
-        >
-          SDXL Base 1.0
-        </option>
-        <option id="modelOption" value="stablediffusionapi/waifu-journey-2">
-          Waifu Journey 2
-        </option>
-        <option id="modelOption" value="emilianJR/epiCRealism">
-          Epic Realism
-        </option>
-        <option id="modelOption" value="ogkalu/Comic-Diffusion">
-          Comic Diffusion
-        </option>
-        <option id="modelOption" value="stabilityai/stable-diffusion-2-1-base">
-          Stable Diffusion 2.1 Base
-        </option>
-        <option id="modelOption" value="prompthero/openjourney">
-          Open Journey
-        </option>
-        <option id="modelOption" value="ostris/ikea-instructions-lora-sdxl">
-          IKEA instructions
-        </option>
-        <option id="modelOption" value="nerijs/pixel-art-xl">
-          Pixel Art XL
-        </option>
-        <option id="modelOption" value="artificialguybr/PixelArtRedmond">
-          Pixel Art Redmond
-        </option>
+      <label class="label-adv">Find Model :</label><br />
 
-        <option id="modelOption" value="hotshotco/SDXL-512">SDXL 512</option>
-        <option id="modelOption" value="lberglund/lora-trained-xl">
-          Lora Trained XL
-        </option>
-      </select>
-      <div class="d-flex helper justify-content-end">
-        <a href="https://huggingface.co/models?pipeline_tag=text-to-image"
-          >Find your custom model</a
-        >
+      <!--  
+      -->
+      <input
+        placeholder="Find model"
+        id="inputSearch"
+        class="form-control bg-transparent text-light"
+      />
+      <div id="searchList" style="display: none">
+        <div class="searchModal">
+          <ul class="list-group">
+            <div
+              class="list-group-item bg-transparent text-light"
+              id="searchResult1"
+            >
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </div>
+            <div
+              class="list-group-item bg-transparent text-light"
+              id="searchResult2"
+            >
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </div>
+            <div
+              class="list-group-item bg-transparent text-light"
+              id="searchResult3"
+            >
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </div>
+            <div
+              class="list-group-item bg-transparent text-light"
+              id="searchResult4"
+            >
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </div>
+            <div
+              class="list-group-item bg-transparent text-light"
+              id="searchResult5"
+            >
+              <span class="spinner-border spinner-border-sm text-light"></span>
+            </div>
+          </ul>
+        </div>
       </div>
       <hr />
       <br />

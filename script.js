@@ -1,3 +1,6 @@
+//import { hapuswm } from "./module/watermark.js";
+
+
 import {
   btnGen,
   image,
@@ -39,7 +42,7 @@ function generate() {
   errorMsg.innerHTML = "";
   if (input.value.length < 1) {
     errorMsg.innerHTML = "Masukan Prompt";
-    input.focus()
+    input.focus();
   } else {
     // hitung();
     run();

@@ -58,13 +58,12 @@ export function run() {
       console.log(URL.createObjectURL(response));
       spinner.style.display = "none";
       running.style.display = "none";
-
+      image.style.opacity = "1";
       if (response.size < 500) {
+        image.style.opacity = "0";
         errorMsg.innerHTML = `Error : <br><ul>
-          <li>Cek kembali prompt kamu</li>
-          <li>Refresh halaman</li>
-          <li>Ada typo saat penulisan model</li>
-          <li>Model tersebut tidak bisa di deploy</li>
+          <li>Model Masih proses deploy dan coba lagi setelah 30 detik lalu refresh halaman,
+          Jika lewat 30detik masih error, Model tersebut tidak bisa di deploy</li>
           <li>Coba untuk mengubah seed</li>
           <li>Pastikan access token tidak salah</li>
           </ul>
