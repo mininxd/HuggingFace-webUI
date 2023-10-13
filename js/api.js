@@ -1,5 +1,5 @@
 import { btnGen, inputApi, loginEl } from "./variabel.js";
-var getAPI = localStorage.getItem("hugface");
+var getAPI = localStorage.getItem("hugface-api-mininxd");
 export const api = getAPI;
 var apikey = document.getElementById("apikey");
 var showApi = document.getElementById("showApi");
@@ -20,7 +20,7 @@ if (getAPI == null) {
     if (inputApi.value.length < 5) {
       inputApi.focus();
     } else {
-      localStorage.setItem("hugface", inputApi.value);
+      localStorage.setItem("hugface-api-mininxd", inputApi.value);
       location.reload();
     }
   }
@@ -33,6 +33,6 @@ if (getAPI == null) {
 
 document.getElementById("deleteApi").addEventListener("click", () => del());
 function del() {
-  localStorage.removeItem("hugface");
+  localStorage.removeItem("hugface-api-mininxd");
   location.reload();
 }
