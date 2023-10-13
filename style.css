@@ -121,7 +121,7 @@ a:visited {
 
 #apikey {
   font-size: 10px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 #showApi {
   font-size: 12px;
@@ -140,7 +140,8 @@ a:visited {
 #schedulerSelect {
   border: 1px solid #555;
 }
-.list-group-item {
+.list-group-item,
+#inputApi {
   border: solid 1px #555;
   overflow-x: scroll;
 }
