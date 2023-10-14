@@ -1,6 +1,5 @@
 //import { hapuswm } from "./module/watermark.js";
 
-
 import {
   btnGen,
   image,
@@ -48,36 +47,24 @@ function generate() {
     run();
   }
 }
-Xdel.addEventListener("click", () => deletePrompt());
-function deletePrompt() {
-  input.value = "";
-}
 
-seedSlider.addEventListener("change", () => seeds());
-function seeds() {
-  seedEl.value = seedSlider.value;
-}
-inferenceSlider.addEventListener("change", () => inferences());
-function inferences() {
-  inference.innerHTML = inferenceSlider.value;
-}
+Xdel.addEventListener("click", () => (input.value = ""));
 
-guidanceSlider.addEventListener("change", () => guidances());
-function guidances() {
-  guidance.innerHTML = guidanceSlider.value;
-}
+seedSlider.addEventListener("change", () => (seedEl.value = seedSlider.value));
 
-modelSelect.addEventListener("change", () => model());
-function model() {
-  modelInput.value = modelSelect.value;
-}
+inferenceSlider.addEventListener(
+  "change",
+  () => (inference.innerHTML = inferenceSlider.value)
+);
 
-negativeSelect.addEventListener("change", () => negative());
-function negative() {
-  negativePrompt.value = negativeSelect.value;
-}
+guidanceSlider.addEventListener(
+  "change",
+  () => (guidance.innerHTML = guidanceSlider.value)
+);
 
-schedulerSelect.addEventListener("change", () => scheduler());
-function scheduler() {
-  //  console.log(schedulerSelect.value);
-}
+negativeSelect.addEventListener(
+  "change",
+  () => (negativePrompt.value = negativeSelect.value)
+);
+
+

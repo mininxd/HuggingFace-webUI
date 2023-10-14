@@ -145,3 +145,45 @@ a:visited {
   border: solid 1px #555;
   overflow-x: scroll;
 }
+.deployLoading {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+.deployLoadingBarTop,
+.deployLoadingBarBot {
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 100;
+  padding: 10px 0 0 0;
+}
+.deployLoadingBarTop {
+  animation: deploy linear 30s;
+  width: 0;
+  z-index: 100;
+  background: #fff;
+  color: #000;
+  overflow-x: hidden;
+}
+.deployLoadingBarBot {
+  color: #fff;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+}
+
+@keyframes deploy {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.row-cols-auto {
+  padding-top: 5px;
+
+}

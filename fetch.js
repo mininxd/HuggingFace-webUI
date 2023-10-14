@@ -1,3 +1,4 @@
+import { deploy } from "./module/deployLoading.js";
 import { api } from "./js/api.js";
 import {
   image,
@@ -59,14 +60,19 @@ export function run() {
       spinner.style.display = "none";
       running.style.display = "none";
       image.style.opacity = "1";
-      if (response.size < 500) {
+      if (response.size < 100) {
+        deploy();
         image.style.opacity = "0";
-        errorMsg.innerHTML = `Error : <br><ul>
-          <li>Model Masih proses deploy dan coba lagi setelah 30 detik lalu refresh halaman,
-          Jika lewat 30detik masih error, Model tersebut tidak bisa di deploy</li>
-          <li>Coba untuk mengubah seed</li>
-          <li>Pastikan access token tidak salah</li>
-          </ul>
+
+        errorMsg.innerHTML = `Proses deploy model...
+        <br>
+        Jika di run tapi masih proses deploy :
+        <ul>
+        <li>Pastikan nama model tidak typo</li>
+       <li>Jika tidak ada typo, Run kembali setelah beberapa saat</li>
+        <li>Cek kembali Access Token</li>
+        <li>Model tersebut tidak dapat di deploy</li>
+        </ul>
           `;
       }
     })

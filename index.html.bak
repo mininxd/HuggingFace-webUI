@@ -20,12 +20,9 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./module/pintura.css" />
-    <script src="./module/templateList.js"></script>
     <script type="module" src="./script.js"></script>
-    <script type="module" src="./module/deployLoading.js"></script>
     <script type="module" src="./module/pintura.js"></script>
     <script type="module" src="./module/pinturaScript.js"></script>
-    <script type="module" src="./module/search.js"></script>
   </head>
   <body>
     <center>
@@ -82,26 +79,16 @@
         id="spinner"
         style="display: none"
         class="spinner-border spinner-border-sm text-dark"
-      ></span>
-    </button>
-    <div id="deployBar" style="display: none" class="deployLoading">
-      <div id="deployLoading" class="deployLoadingBarTop">
-        &nbsp; &nbsp; Deploying...
-      </div>
-      <div class="align-middle deployLoadingBarBot">
-        &nbsp; &nbsp; Deploying...
-      </div>
-    </div>
-    <br />
-
+      ></span></button
+    ><br />
     <span id="errorMsg"></span>
+
     <br />
     <div class="resultImg">
       <span clsss="resultText" style="opacity: 0.5">Result: </span><br />
       <div class="d-flex justify-content-center">
-        <img width="256px" height="auto" id="image" />
+        <img width="256px" height="auto" id="image"/>
       </div>
-
       <span
         class="opacity-50 d-flex justify-content-end"
         style="display: none; font-size: 10px"
@@ -137,103 +124,55 @@
       <label class="label-adv">Model :</label>
       <br />
       <input
-        value=""
+        value="stabilityai/stable-diffusion-xl-base-1.0"
         class="text-light form-control bg-transparent"
         id="modelInput"
       />
       <br />
-
-      <label class="label-adv">Find Model :</label><br />
-      <!--  
-      -->
-      <input
-        placeholder="Find model"
-        id="inputSearch"
-        class="form-control bg-transparent text-light"
-      />
-      <div id="searchList" style="display: none">
-        <div class="searchModal">
-          <ul class="list-group">
-            <div
-              class="list-group-item bg-transparent text-light"
-              id="searchResult1"
-            >
-              <span class="spinner-border spinner-border-sm text-light"></span>
-            </div>
-            <div
-              class="list-group-item bg-transparent text-light"
-              id="searchResult2"
-            >
-              <span class="spinner-border spinner-border-sm text-light"></span>
-            </div>
-            <div
-              class="list-group-item bg-transparent text-light"
-              id="searchResult3"
-            >
-              <span class="spinner-border spinner-border-sm text-light"></span>
-            </div>
-            <div
-              class="list-group-item bg-transparent text-light"
-              id="searchResult4"
-            >
-              <span class="spinner-border spinner-border-sm text-light"></span>
-            </div>
-            <div
-              class="list-group-item bg-transparent text-light"
-              id="searchResult5"
-            >
-              <span class="spinner-border spinner-border-sm text-light"></span>
-            </div>
-          </ul>
-        </div>
-      </div>
-
-      <br />
       <label class="label-adv">Model Template :</label><br />
-      <div class="row row-cols-auto">
-        <div class="col-auto">
-          <button onclick="template_sdxl()" class="btn btn-sm btn-light">
-            SDXL
-          </button>
+      <select id="modelSelect" class="form-select bg-transparent text-light">
+        <option
+          id="modelOption"
+          selected
+          value="stabilityai/stable-diffusion-xl-base-1.0"
+        >
+          SDXL Base 1.0
+        </option>
+        <option id="modelOption" value="stablediffusionapi/waifu-journey-2">
+          Waifu Journey 2
+        </option>
+        <option id="modelOption" value="emilianJR/epiCRealism">
+          Epic Realism
+        </option>
+        <option id="modelOption" value="ogkalu/Comic-Diffusion">
+          Comic Diffusion
+        </option>
+        <option id="modelOption" value="stabilityai/stable-diffusion-2-1-base">
+          Stable Diffusion 2.1 Base
+        </option>
+        <option id="modelOption" value="prompthero/openjourney">
+          Open Journey
+        </option>
+        <option id="modelOption" value="ostris/ikea-instructions-lora-sdxl">
+          IKEA instructions
+        </option>
+        <option id="modelOption" value="nerijs/pixel-art-xl">
+          Pixel Art XL
+        </option>
+        <option id="modelOption" value="artificialguybr/PixelArtRedmond">
+          Pixel Art Redmond
+        </option>
 
-          <button onclick="template_epicRealism()" class="btn btn-sm btn-light">
-            epicRealism
-          </button>
-
-          <button
-            onclick="template_waifuJourney()"
-            class="btn btn-sm btn-light"
-          >
-            WaifuJourney2
-          </button>
-        </div>
-
-        <div class="row row-cols-auto">
-          <div class="col-auto">
-            <button
-              onclick="template_ikeaInstructions()"
-              class="btn btn-sm btn-light"
-            >
-              ikea instruction
-            </button>
-
-            <button
-              onclick="template_pixelArtXL()"
-              class="btn btn-sm btn-light"
-            >
-              pixelArt XL
-            </button>
-            <button
-              onclick="template_pixelArtRedmond()"
-              class="btn btn-sm btn-light"
-            >
-              pixelArtRedmond
-            </button>
-          </div>
-        </div>
+        <option id="modelOption" value="hotshotco/SDXL-512">SDXL 512</option>
+        <option id="modelOption" value="lberglund/lora-trained-xl">
+          Lora Trained XL
+        </option>
+      </select>
+      <div class="d-flex helper justify-content-end">
+        <a href="https://huggingface.co/models?pipeline_tag=text-to-image"
+          >Find your custom model</a
+        >
       </div>
-
-      <br />
       <hr />
       <br />
       <label class="label-adv">Negative Prompt:</label>
