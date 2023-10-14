@@ -22,3 +22,5 @@ export const inferenceSlider = document.getElementById("inferenceSlider");
 export const guidance = document.getElementById("guidance");
 export const guidanceSlider = document.getElementById("guidanceSlider");
 export const inputSearch = document.getElementById("inputSearch");
+export const deployLoading = document.getElementById("deployLoading");
+export const deployBar = document.getElementById("deployBar");
