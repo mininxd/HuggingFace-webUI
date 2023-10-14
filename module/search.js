@@ -53,12 +53,13 @@ inputSearch.addEventListener("blur", () =>
   }, 50)
 );
 
-inputSearch.addEventListener("input", () => cari());
-function cari() {
-  loading();
+inputSearch.addEventListener("input", () => find());
+function find(){
+setTimeout(function () {
   searchFetch();
+  loading();
+}, 100);
 }
-
 ///
 ///
 ///
@@ -85,9 +86,9 @@ result5.addEventListener(
 );
 
 function saveRecentModel() {
-	setTimeout( function() {
-	localStorage.setItem("recentModel", modelInput.value)
-	},100);
+  setTimeout(function () {
+    localStorage.setItem("recentModel", modelInput.value);
+  }, 100);
 }
 
 modelInput.value = localStorage.getItem("recentModel");
