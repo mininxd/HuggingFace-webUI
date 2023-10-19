@@ -60,7 +60,7 @@ export function run() {
       spinner.style.display = "none";
       running.style.display = "none";
       image.style.opacity = "1";
-      if (response.size < 100) {
+      if (response.size < 200) {
         deploy();
         image.style.opacity = "0";
 

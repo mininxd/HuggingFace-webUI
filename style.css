@@ -185,5 +185,12 @@ a:visited {
 }
 .row-cols-auto {
   padding-top: 5px;
-
 }
+.editor,
+.pintura-editor,pintura-editor {
+  --color-background:35,35,35 !important;
+  --color-foreground: 255, 255, 255 !important;
+}
+
+
+
