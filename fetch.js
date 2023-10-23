@@ -23,7 +23,7 @@ export function run() {
   btnGen.classList.add("btn-secondary");
   var input = document.getElementById("input");
 
-  console.log("proses: " + input.value);
+//  console.log("proses: " + input.value);
   async function query(data) {
     const response = await fetch(
       "https://api-inference.huggingface.co/models/" + modelInput.value,
@@ -54,9 +54,9 @@ export function run() {
     .then((response) => {
       btnGen.disabled = false;
       btnGen.classList.remove("btn-secondary");
-      console.log(response);
+     // console.log(response);
       image.src = URL.createObjectURL(response);
-      console.log(URL.createObjectURL(response));
+    //  console.log(URL.createObjectURL(response));
       spinner.style.display = "none";
       running.style.display = "none";
       image.style.opacity = "1";
@@ -77,7 +77,7 @@ export function run() {
       }
     })
     .catch((error) => {
-      console.log(error);
+//      console.log(error);
       running.style.display = "none";
       btnGen.disabled = false;
       btnGen.classList.remove("btn-secondary");
