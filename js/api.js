@@ -4,6 +4,11 @@ export const api = getAPI;
 var apikey = document.getElementById("apikey");
 var showApi = document.getElementById("showApi");
 
+var promptGenerator = document.getElementById("promptGenLoginFirst");
+export const promptGenBtn = document.getElementById("promptGenBtn");
+export const promptGenBtnRan = document.getElementById("promptGenBtnRan");
+export const promptGenInput = document.getElementById("promptGenInput");
+
 apikey.innerHTML = "Your API : ******************";
 
 showApi.addEventListener("click", () => show());
@@ -29,6 +34,12 @@ if (getAPI == null) {
   apikey.innerHTML =
     "<a href='https://huggingface.co/settings/tokens'> Get huggingface Access Token </a>";
   apikey.style.fontSize = "16px";
+  promptGenerator.style.display = "block";
+  promptGenBtn.disabled = true;
+  promptGenBtn.style.display = "none";
+  promptGenBtnRan.disabled = true;
+  promptGenBtnRan.style.display = "none";
+  promptGenInput.disabled = true;
 }
 
 document.getElementById("deleteApi").addEventListener("click", () => del());

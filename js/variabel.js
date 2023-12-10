@@ -1,3 +1,6 @@
+export const promptGenBtn = document.getElementById("promptGenBtn");
+export const promptGenBtnRan = document.getElementById("promptGenBtnRan");
+export const promptGenInput = document.getElementById("promptGenInput");
 export const btnGen = document.getElementById("btn-generate");
 export const loginEl = document.getElementById("login");
 export const inputApi = document.getElementById("inputApi");
