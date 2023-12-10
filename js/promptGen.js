@@ -57,7 +57,7 @@ export function getPrompt() {
   input.value = JSON.stringify(data.candidates[0].output).toString().replace(/"/g,"");
   promptGenBtn.disabled = false;
   promptGenInput.disabled = false;
-  btnGen.classList.remove("btn-secondary");
+  promptGenBtn.classList.remove("btn-secondary");
   
 }).catch((error) => {
   console.log(error)
