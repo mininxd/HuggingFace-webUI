@@ -7,7 +7,7 @@ export function deploy() {
   var timer = setInterval(function () {
     i++;
     console.log(i);
-    if (i == 30) {
+    if (i == 45) {
       deployBar.style.display = "none";
       btnGen.style.display = "block";
       errorMsg.style.display = "none";
