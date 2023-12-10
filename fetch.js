@@ -1,4 +1,5 @@
 import { deploy } from "./module/deployLoading.js";
+import { query } from "./module/captioning.js";
 import { api } from "./js/api.js";
 import {
   image,
@@ -23,7 +24,7 @@ export function run() {
   btnGen.classList.add("btn-secondary");
   var input = document.getElementById("input");
 
-//  console.log("proses: " + input.value);
+  //  console.log("proses: " + input.value);
   async function query(data) {
     const response = await fetch(
       "https://api-inference.huggingface.co/models/" + modelInput.value,
@@ -46,20 +47,23 @@ export function run() {
     seed: seedEl.value,
     num_inference_steps: inferenceSlider.value,
     guidance_scale: parseFloat(guidanceSlider.value),
-    // multi_lingual: "yes",
+   multi_lingual: "yes",
     enhance_prompt: "yes",
     dropdown: schedulerSelect.value,
     scheduler: schedulerSelect.value,
+    width: "288",
+    height: "512",
   })
     .then((response) => {
       btnGen.disabled = false;
       btnGen.classList.remove("btn-secondary");
-     // console.log(response);
+     //  console.log(response);
       image.src = URL.createObjectURL(response);
     //  console.log(URL.createObjectURL(response));
       spinner.style.display = "none";
       running.style.display = "none";
       image.style.opacity = "1";
+      query();
       if (response.size < 200) {
         deploy();
         image.style.opacity = "0";
@@ -77,7 +81,7 @@ export function run() {
       }
     })
     .catch((error) => {
-//      console.log(error);
+      //      console.log(error);
       running.style.display = "none";
       btnGen.disabled = false;
       btnGen.classList.remove("btn-secondary");

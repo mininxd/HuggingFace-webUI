@@ -64,6 +64,14 @@
         class="form-control"
         id="input"
       ></textarea>
+    
+      <div class="input-group mb-3 margin-xd">
+  <input id="promptGenInput" type="text" class="form-control bg-transparent" placeholder="Prompt Generator">
+  <button class="btn btn-outline-light" type="button" style="display:none;" id="promptGenLoginFirst">Login Dahulu</button>
+  <button class="btn btn-outline-light" type="button" id="promptGenBtnRan">Randomize</button>
+  <button class="btn btn-outline-light" type="button" id="promptGenBtn">Generate</button>
+</div> 
+
       <input type="number" placeholder="Seed" class="form-control" id="seed" />
       <input
         value="0"
@@ -99,7 +107,7 @@
     <div class="resultImg">
       <span clsss="resultText" style="opacity: 0.5">Result: </span><br />
       <div class="d-flex justify-content-center">
-        <img width="256px" height="auto" id="image"/>
+      <!--  <img width="256px" height="auto" id="image" src="test.png"/> -->
       </div>
 
       <span

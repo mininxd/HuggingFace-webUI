@@ -1,7 +1,11 @@
 //import { hapuswm } from "./module/watermark.js";
 
+import {getPrompt, getRandPrompt} from "./js/promptGen.js"
 import {
   btnGen,
+  promptGenBtn,
+  promptGenBtnRan,
+  promptGenInput,
   image,
   Xdel,
   errorMsg,
@@ -67,4 +71,33 @@ negativeSelect.addEventListener(
   () => (negativePrompt.value = negativeSelect.value)
 );
 
+promptGenInput.addEventListener("keyup", () =>
+{
+if(promptGenInput.value.length >= 1) {
+  promptGenBtn.style.display = 'block';
+  promptGenBtnRan.style.display = 'none';
+  
+} else {
+  promptGenBtn.style.display = 'none';
+  promptGenBtnRan.style.display = 'block';
+}
+})
+promptGenBtn.style.display = 'none';
 
+
+promptGenBtn.addEventListener("click", () => {
+  getPrompt();
+  promptGenBtn.disabled = true;
+  promptGenInput.disabled = true;
+  promptGenBtn.classList.add("btn-secondary");
+})
+promptGenBtnRan.addEventListener("click", () => {
+  getRandPrompt();
+  promptGenBtnRan.disabled = true;
+  promptGenInput.disabled = true;
+  promptGenBtnRan.classList.add("btn-secondary");
+})
+
+
+
+//getPrompt();

@@ -31,12 +31,20 @@ hr {
   border: 1px solid #555;
 }
 #input::placeholder,
+#promptGenInput::placeholder,
 #negativePrompt::placeholder,
 #seed::placeholder,
 #inputApi::placeholder,
 #inputSearch::placeholder {
-  color: #fff;
+  color: #fff !important;
   opacity: 0.5;
+}
+#promptGenInput, #promptGenBtn, #promptGenBtnRan, #promptGenLoginFirst{
+  border: 1px #555 solid;
+  color: #fff;
+}
+#promptGenBtnRan {
+  border-radius: 0 6px 6px 0;
 }
 #inputSearch {
   border: 1px #555 solid;
@@ -191,6 +199,7 @@ a:visited {
   --color-background:35,35,35 !important;
   --color-foreground: 255, 255, 255 !important;
 }
-
-
-
+.margin-xd {
+  margin-top: 10px;
+  width: 98%;
+}
