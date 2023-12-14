@@ -1,3 +1,5 @@
+export const loadRand = document.getElementById("loadRand");
+export const loadGen = document.getElementById("loadGen");
 export const promptGenBtn = document.getElementById("promptGenBtn");
 export const promptGenBtnRan = document.getElementById("promptGenBtnRan");
 export const promptGenInput = document.getElementById("promptGenInput");

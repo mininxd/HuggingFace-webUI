@@ -27,7 +27,7 @@ export function getRandPrompt() {
   input.value = JSON.stringify(data.candidates[0].output).toString().replace(/"/g,"");
   promptGenBtnRan.disabled = false;
   promptGenInput.disabled = false;
-  promptGenBtnRan.classList.remove("btn-secondary");
+  loadRand.style.display = "none";
   
 }).catch((error) => {
   console.log(error)
@@ -42,7 +42,7 @@ export function getPrompt() {
 {
   method: 'POST',
    body: JSON.stringify({"prompt": 
-      { "text": "Make image prompt of " + promptGenInput.value} 
+      { "text": 'Make image prompt of "' + promptGenInput.value + '"'} 
    }),
    
    headers: {
@@ -57,7 +57,7 @@ export function getPrompt() {
   input.value = JSON.stringify(data.candidates[0].output).toString().replace(/"/g,"");
   promptGenBtn.disabled = false;
   promptGenInput.disabled = false;
-  promptGenBtn.classList.remove("btn-secondary");
+  loadGen.style.display = "none";
   
 }).catch((error) => {
   console.log(error)
