@@ -2,6 +2,8 @@
 
 import {getPrompt, getRandPrompt} from "./js/promptGen.js"
 import {
+  loadRand,
+  loadGen,
   btnGen,
   promptGenBtn,
   promptGenBtnRan,
@@ -89,13 +91,15 @@ promptGenBtn.addEventListener("click", () => {
   getPrompt();
   promptGenBtn.disabled = true;
   promptGenInput.disabled = true;
-  promptGenBtn.classList.add("btn-secondary");
+  loadGen.style.display = "inline-block";
 })
+
 promptGenBtnRan.addEventListener("click", () => {
   getRandPrompt();
+  loadRand.style.display = "inline-block";
   promptGenBtnRan.disabled = true;
   promptGenInput.disabled = true;
-  promptGenBtnRan.classList.add("btn-secondary");
+  
 })
 
 

@@ -68,8 +68,20 @@
       <div class="input-group mb-3 margin-xd">
   <input id="promptGenInput" type="text" class="form-control bg-transparent" placeholder="Prompt Generator">
   <button class="btn btn-outline-light" type="button" style="display:none;" id="promptGenLoginFirst">Login Dahulu</button>
-  <button class="btn btn-outline-light" type="button" id="promptGenBtnRan">Randomize</button>
-  <button class="btn btn-outline-light" type="button" id="promptGenBtn">Generate</button>
+  <button class="btn btn-outline-light" type="button" id="promptGenBtnRan">Randomize      
+  <span
+        id="loadRand"
+        style="display: none"
+        class="spinner-border spinner-border-sm text-light"
+      ></span>
+      </button>
+  <button class="btn btn-outline-light" type="button" id="promptGenBtn">Generate
+        <span
+        id="loadGen"
+        style="display: none"
+        class="spinner-border spinner-border-sm text-light"
+      ></span>
+      </button>
 </div> 
 
       <input type="number" placeholder="Seed" class="form-control" id="seed" />
