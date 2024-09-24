@@ -26,7 +26,7 @@ export function getRandPrompt() {
 
 export function getPrompt() {
  
-  fetch(`https://api.mininxd.my.id/gemini/?q=make an prompt of ${promptGenInput.value}, image prompt, and only prompt`).then((res) => {
+  fetch(`https://api.mininxd.my.id/gemini/?q=make a image prompt of '${promptGenInput.value}', write only prompt`).then((res) => {
   return res.json();
 }).then((data) => {
   // console.log(data.text);
